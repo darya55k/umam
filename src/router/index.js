@@ -89,12 +89,12 @@ const routes = [
     name: 'forgot-successful',
     meta: { hideHeader: true, hideFooter: true },
     component: loadModule('src/views/SuccessfulForgotView.vue', options),
-  }, {
+  }, */{
     path: '/forgot',
     name: 'forgot',
     meta: { hideHeader: true, hideFooter: true },
     component: loadModule('src/views/ForgotView.vue', options),
-  }, {
+  }, /*{
     path: '/reset-password',
     name: 'reset-password',
     meta: { hideHeader: true, hideFooter: true },
