@@ -8,7 +8,7 @@
       </div>
       <div class="auth__body">
         <div class="auth__logo">
-          <img src="assets/style/auth-logo.png" alt="" width="250" />
+          <img src="src/assets/style/auth-logo.png" alt="" width="250" />
         </div>
         <h1 class="auth__title">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h1>
         <div class="auth__form">
@@ -57,17 +57,18 @@
 </template>
 
 <script>
-import { Form, Field, ErrorMessage } from "vee-validate";
-import * as yup from "yup";
+// import { Form, Field, ErrorMessage } from "vee-validate";
+// import * as yup from "yup";
 
 export default {
   name: "ForgotForm",
   components: {
-    Form,
-    Field,
-    ErrorMessage,
+    Form: VeeValidate.Form,
+    Field: VeeValidate.Field,
+    ErrorMessage: VeeValidate.ErrorMessage,
   },
   data() {
+    const yup = require("yup/index.js");
     const schema = yup.object().shape({
       login: yup.string().required("Введите почту или логин"),
     });
@@ -110,6 +111,6 @@ export default {
   },
 };
 </script>
-
+<!-- 
 <style lang="scss">
-</style>
+</style> -->
